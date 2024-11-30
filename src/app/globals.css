@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "Chronicle Display";
+  src: url("/fonts/Chronicle-Display-Black.woff2") format("woff2"),
+    url("/fonts/Chronicle-Display-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --background: #ffffff;
@@ -14,8 +21,79 @@
   }
 }
 
+@keyframes moveBackground {
+  from {
+    background-position: bottom -430px left;
+  }
+  to {
+    background-position: bottom -120px left;
+  }
+}
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  background: #0b1d26 61.38%;
+}
+
+.parent-container {
+  width: 100%;
+}
+.container2 {
+  max-width: 1480px;
+  margin: 0 auto;
+  background: linear-gradient(
+      330.24deg,
+      rgba(11, 29, 38, 0) 31.06%,
+      #0b1d26 108.93%
+    ),
+    url(./images/bg-cloud.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+.container {
+  width: 100%;
+}
+.container-bg {
+  background-image: url(./images/bg-con.png);
+  background-repeat: no-repeat;
+  background-position: top 550px left;
+}
+.parent-hero {
+  background-image: url(./images/bg-hero.png);
+  background-repeat: no-repeat;
+  background-position: bottom -530px left;
+  animation: moveBackground 1s forwards;
+}
+.hero h1 {
+  font-family: "Chronicle Display", sans-serif;
+  font-size: 88px;
+  /* font-weight: 600; */
+  line-height: 100px;
+}
+.cull-cart {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 28%, #0b1d26 45%);
+  background-position: top -210px left;
+}
+.cart h2 {
+  font-family: "Chronicle Display", sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 76.8px;
+}
+.bg-number {
+  position: absolute;
+  top: 30px;
+  font-family: Gilroy;
+  font-size: 240px;
+  font-weight: 700;
+  line-height: 240px;
+  color: rgba(255, 255, 255, 1);
+  opacity: 10%;
+  transform: translate(-130px);
+}
+.bg-number2 {
+  right: 300px;
 }
