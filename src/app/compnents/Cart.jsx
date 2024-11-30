@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Icon from "../images/arrow-next.svg";
-import image2 from "../images/01.png";
 import Title from "./Title";
 function Cart({ num, title, h2, param, img, type }) {
   if (type == "inright") {
