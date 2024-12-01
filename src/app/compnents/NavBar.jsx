@@ -4,7 +4,9 @@ import Account from "../images/account.svg";
 import Link from "next/link";
 function NavBar() {
   return (
-    <div className="header flex justify-between flex-wrap gap-7 h-36 items-center px-20">
+    <div
+      id="start"
+      className="header flex justify-between flex-wrap gap-7 h-36 items-center px-20">
       <Link href="#" className="logotip">
         <Image
           className="hover:scale-110 transition-all duration-300 "

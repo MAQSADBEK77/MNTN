@@ -4,7 +4,7 @@ import Title from "./Title";
 function Cart({ num, title, h2, param, img, type }) {
   if (type == "inright") {
     return (
-      <div className="cull-cart mx-auto relative -top-32 mb-52">
+      <div  className="cull-cart mx-auto relative -top-32 mb-52">
         <div className="relative cart m-auto max-w-[1250px] flex justify-between items-center gap-14">
           <div className="bg-number">{num}</div>
           <div className="cart-left max-w-[632px] flex flex-col gap-[27px]">

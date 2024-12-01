@@ -5,6 +5,7 @@ import instagram from "../images/instagram.svg";
 import twitter from "../images/twitter.svg";
 import Title from "./Title";
 import scroll from "../images/croll-bottom.svg";
+import Animation from "./Animation";
 function Hero() {
   return (
     <div className="hero mx-auto pt-28">
@@ -28,6 +29,7 @@ function Hero() {
           <Image src={scroll} />
         </div>
       </div>
+      <Animation />
     </div>
   );
 }

@@ -7,7 +7,7 @@ export default function Home() {
     <div className="parent-container">
       <div className="container2">
         <div className="container container-bg">
-          <NavBar />
+          <NavBar  />
           <div className="parent-hero w-full min-h-[1500px]">
             <Hero />
           </div>
