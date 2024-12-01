@@ -1,24 +1,24 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link"; // Next.js-ning Link komponenti
+import Link from "next/link";
 
 const Animation = () => {
   const [scrollPercent, setScrollPercent] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY; // Skroll qilingan miqdor
+      const scrollTop = window.scrollY;
       const windowHeight =
-        document.documentElement.scrollHeight - window.innerHeight; // Skroll qilinadigan umumiy masofa
-      const scrolled = (scrollTop / windowHeight) * 100; // Skroll foizi
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (scrollTop / windowHeight) * 100;
       setScrollPercent(scrolled);
     };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll); // Eventni tozalash
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -34,8 +34,7 @@ const Animation = () => {
         <div className="progress h-36 w-1 bg-white relative">
           <div
             className="bg-slate-700 absolute top-0 left-0 w-full"
-            style={{ height: `${100 - scrollPercent}%` }} // Pastga qarab to'ldirish uchun
-          ></div>
+            style={{ height: `${100 - scrollPercent}%` }}></div>
         </div>
       </div>
     </div>
